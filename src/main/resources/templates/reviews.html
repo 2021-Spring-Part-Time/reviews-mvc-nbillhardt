@@ -1,22 +1,24 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="style.css" />
     <title>A List of All Reviews</title>
 </head>
 <body>
 
 <header>
-    <h1>A List of All Wrestler Reviews</h1>
+    <h1>A List of All Animal Reviews</h1>
 </header>
 
 <main>
-    <ul>
+    <p>Over the years I have had various types of pets. This is a review of what it is like to have a cat, dog or reptile for a pet. While all three have various kinds we are just looking at them in a general sense. Regardless of what type of pet you have pros and cons are involved. For any pet you have some of the pros are enjoyment to interact with, a companion, and they become a part of the family. Some of the cons to having any pet are you are not able to travel without planning for the pets care. Having to clean up after them which can be harder for some pets over others.</p>
+    <p>
         <li th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a></li>
-    </ul>
+    </p>
 </main>
 
 <footer>
-    <small>@copy Nick Billhardt Reviews 2021</small>
+    <small>&COPY; Nick Billhardt Reviews 2021</small>
 </footer>
 
 </body>
