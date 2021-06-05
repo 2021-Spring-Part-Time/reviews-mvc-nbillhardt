@@ -5,10 +5,9 @@ public class Review {
     private Long id;
     private String title;
     private String imageURL;
-
     private String category;
-
     private String content;
+
     public Long getId() {
         return id;
     }

@@ -13,15 +13,15 @@ public class ReviewController {
     @Resource
     private ReviewRepository reviewRepo;
 
-    @RequestMapping("/reviews")
+    @RequestMapping({"/reviews", "/", ""})
     public String findAllReviews(Model model) {
         model.addAttribute("reviewsModel", reviewRepo.findAll());
         return "reviews";
     }
 
     @RequestMapping("/review")
-    public String findOneReview(@RequestParam(value = "id") Long id, Model model) throws ReviewNotFoundException{
-        if (reviewRepo.findOne(id) == null){
+    public String findOneReview(@RequestParam(value = "id") Long id, Model model) throws ReviewNotFoundException {
+        if (reviewRepo.findOne(id) == null) {
             throw new ReviewNotFoundException();
         }
         model.addAttribute("reviewModel", reviewRepo.findOne(id));
