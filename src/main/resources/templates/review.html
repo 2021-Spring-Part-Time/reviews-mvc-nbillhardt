@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <title th:text="${reviewModel.title} + ' Review'"></title>
+</head>
+<body>
+
+<header>
+
+    <h2><a href="/reviews">Homepage</a></h2>
+
+</header>
+
+<main>
+    <h1 th:text="${reviewModel.title}"></h1>
+    <h3 th:text="${reviewModel.category}"></h3>
+    <p th:text="${reviewModel.content}"></p>
+    <img th:src="${reviewModel.imageURL}">
+</main>
+
+<footer>
+    <small>&COPY; Nick Billhardt Reviews 2021</small>
+</footer>
+
+</body>
+</html>

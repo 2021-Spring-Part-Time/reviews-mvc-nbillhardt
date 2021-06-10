@@ -1,0 +1,30 @@
+* {
+  font-family: sans-serif;
+  line-height: 1.718em;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #898;
+  color: black;
+}
+footer {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  background: #666;
+  color: #fff;
+  padding: 1em 0;
+}
+header,
+main,
+footer {
+  margin: 0 auto;
+  max-width: 1050px;
+  text-align: center;
+}
+img {
+  width: 70%;
+  border: 1px solid #333;
+}
